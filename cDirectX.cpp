@@ -16,15 +16,15 @@ int DirectXInit(HWND hWnd)
 		exit(1);
 
 	ZeroMemory(&p_Params, sizeof(p_Params));    
-    p_Params.Windowed = TRUE;   
-    p_Params.SwapEffect = D3DSWAPEFFECT_DISCARD;    
-    p_Params.hDeviceWindow = hWnd;    
+	p_Params.Windowed = TRUE;   
+	p_Params.SwapEffect = D3DSWAPEFFECT_DISCARD;    
+	p_Params.hDeviceWindow = hWnd;    
 	p_Params.MultiSampleQuality   = D3DMULTISAMPLE_NONE;
-    p_Params.BackBufferFormat = D3DFMT_A8R8G8B8 ;     
-    p_Params.BackBufferWidth = Width;    
-    p_Params.BackBufferHeight = Height;    
-    p_Params.EnableAutoDepthStencil = TRUE;
-    p_Params.AutoDepthStencilFormat = D3DFMT_D16;
+	p_Params.BackBufferFormat = D3DFMT_A8R8G8B8 ;     
+	p_Params.BackBufferWidth = Width;    
+	p_Params.BackBufferHeight = Height;    
+	p_Params.EnableAutoDepthStencil = TRUE;
+	p_Params.AutoDepthStencilFormat = D3DFMT_D16;
 
 	if(FAILED(p_Object->CreateDeviceEx(D3DADAPTER_DEFAULT, D3DDEVTYPE_HAL, hWnd, D3DCREATE_HARDWARE_VERTEXPROCESSING, &p_Params, 0, &p_Device)))
 		exit(1);
